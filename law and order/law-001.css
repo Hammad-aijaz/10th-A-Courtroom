@@ -1,0 +1,16 @@
+/* Styles specific to Article 001 — separate file per-law as requested */
+:root{--gold:var(--accent-gold);--maroon:var(--accent-burgundy)}
+.law-wrapper{position:relative;overflow:hidden}
+.watermark{position:absolute;inset:20px;opacity:0.04;background:url('./assets/seal.svg') center/40% no-repeat;pointer-events:none}
+.article-body{padding:8px 4px 28px}
+.article-number{font-family:Merriweather,serif;color:var(--gold);font-size:14px;letter-spacing:2px}
+.article-title{font-family:Merriweather,serif;font-size:22px;margin-top:6px}
+.clause{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:12px;border-left:4px solid rgba(212,168,87,0.14);margin:12px 0;border-radius:6px}
+.clause:hover{box-shadow:0 8px 30px rgba(2,9,20,0.6);transform:translateY(-4px);transition:all 220ms ease}
+.clause{transition:all 240ms ease}
+.clause-number{color:var(--gold);font-weight:700}
+.discipline ol{padding-left:18px}
+.signatories{margin-top:18px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.02)}
+.sig-card{display:flex;gap:12px;align-items:center;padding:8px 0}
+.sig-card img{width:120px;height:40px;object-fit:contain;filter:grayscale(1) contrast(0.8) opacity(0.9)}
+@media(max-width:800px){.signatories{display:block}.sig-card{flex-direction:row}}

@@ -1,0 +1,62 @@
+/* Components and shared theme variables */
+:root{
+  --bg:#071029; /* deep navy */
+  --secondary:#0E1926; /* charcoal/secondary */
+  --accent-gold:#D4A857;
+  --accent-burgundy:#7A0A1A;
+  --text:#EAEAEA;
+  --muted:#B0B3B8;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial; background:linear-gradient(180deg,var(--bg),#06060a);color:var(--text);-webkit-font-smoothing:antialiased}
+.site-header{padding:28px 24px;background:linear-gradient(180deg,rgba(13,18,24,0.6),transparent);border-bottom:1px solid rgba(212,168,87,0.06)}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:18px}
+.seal{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 30% 30%, rgba(212,168,87,0.18), transparent 30%), url('./assets/seal.svg') center/cover no-repeat;box-shadow:0 4px 18px rgba(13,26,40,0.6),0 0 18px rgba(212,168,87,0.06) inset}
+.title-block h1{font-family:"Times New Roman",Times,Georgia,serif;font-weight:700;margin:0;font-size:20px;color:var(--text);letter-spacing:0.6px}
+.issuance{color:var(--muted);margin:2px 0 0;font-size:13px}
+.header-actions{margin-left:auto;display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn-primary{background:linear-gradient(180deg,var(--accent-gold),#b6863f);color:#071018;border:1px solid rgba(0,0,0,0.25);box-shadow:0 6px 20px rgba(10,10,15,0.7)}
+.btn-ghost{background:transparent;border:1px solid rgba(212,168,87,0.12);color:var(--accent-gold)}
+.gold-divider{height:6px;background:linear-gradient(90deg,transparent,var(--accent-gold),transparent);margin-top:12px;border-radius:3px;max-width:1100px;margin-left:auto;margin-right:auto}
+
+/* Animated decorative background */
+.bg-animated{
+  position:relative;overflow:hidden;
+}
+.bg-animated::before{
+  content:'';position:absolute;inset:-25% -50% -25% -50%;background:radial-gradient(closest-side,rgba(212,168,87,0.06),transparent 40%), linear-gradient(120deg, rgba(13,33,68,0.18), rgba(12,18,28,0.06));transform:rotate(8deg);animation:slowShift 14s ease-in-out infinite;pointer-events:none}
+.bg-animated::after{
+  content:'';position:absolute;inset:0;background-image:linear-gradient(90deg, rgba(212,168,87,0.02), transparent);mix-blend-mode:overlay;pointer-events:none}
+
+@keyframes slowShift{
+  0%{transform:translateX(-8%) rotate(2deg)}
+  50%{transform:translateX(6%) rotate(-2deg)}
+  100%{transform:translateX(-8%) rotate(2deg)}
+}
+
+/* Floating icons (gavel / scales) */
+.floating-legal{position:absolute;opacity:0.06;filter:blur(0.6px);animation:floatY 8s ease-in-out infinite}
+@keyframes floatY{0%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-12px) rotate(6deg)}100%{transform:translateY(0) rotate(-6deg)}}
+
+/* Reveal animations */
+.fade-in{animation:fadeInUp .9s ease both}
+.fade-delayed{animation-delay:.18s}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.slide-left{animation:slideLeft .8s ease both}
+@keyframes slideLeft{from{opacity:0;transform:translateX(18px)}to{opacity:1;transform:none}}
+
+.home-btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:8px;color:var(--text);font-weight:600}
+.hero{padding:48px 20px;background:linear-gradient(180deg,rgba(14,26,43,0.35),transparent);}
+.hero-inner{max-width:980px;margin:0 auto}
+.serif{font-family:"Times New Roman",Times,Georgia,serif;color:var(--text);font-size:30px}
+.lead{color:var(--muted);max-width:780px}
+.hero-cta{margin-top:20px;display:flex;gap:14px}
+.btn-outline{border:2px solid rgba(212,168,87,0.14);background:transparent;color:var(--text);padding:10px 14px;border-radius:8px}
+.large{padding:14px 22px}
+.site-footer{padding:28px 20px;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px}
+.footer-inner{max-width:1100px;margin:0 auto;text-align:center;color:var(--muted)}
+.latin{font-style:italic;color:var(--accent-gold);margin-bottom:6px}
+.scroll-top{position:fixed;right:20px;bottom:20px;background:linear-gradient(180deg,var(--accent-gold),#b6863f);color:#071018;border:none;padding:10px 12px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,0.6);cursor:pointer;display:none}
+@media(max-width:700px){.header-inner{flex-direction:row;align-items:center}.title-block h1{font-size:16px}.seal{width:64px;height:64px}}

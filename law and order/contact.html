@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Supreme Court of Justice and Law</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./components.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner"><div class="seal"></div><div class="title-block"><h1>Contact</h1><p class="issuance">Official communication and enquiries</p></div>
+    <nav class="header-actions"><a class="home-btn" href="index.html">Home</a><button id="translateBtn" class="btn btn-outline">Translate</button></nav>
+    </div><div class="gold-divider"></div></header>
+  <main class="container">
+    <section class="card fade-in">
+      <form id="contactForm" action="#" method="POST">
+        <label class="kv">Name</label><br>
+        <input name="name" required style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--text)">
+        <label class="kv">Email</label><br>
+        <input name="email" type="email" required style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--text)">
+        <label class="kv">Message Type</label><br>
+        <select name="type" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--text)">
+          <option>General Enquiry</option>
+          <option>Legal Submission</option>
+          <option>Press</option>
+        </select>
+        <label class="kv">Message</label><br>
+        <textarea name="message" required style="width:100%;padding:12px;margin:6px 0;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:var(--text);min-height:140px"></textarea>
+        <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+          <div style="flex:1"><button class="btn btn-primary" type="submit">Send Message</button></div>
+          <div style="width:200px;text-align:right;color:var(--muted);font-size:12px">Rate-limited • CAPTCHA placeholder</div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p class="latin">Fiat Justitia Ruat Caelum</p></div></footer>
+  <script src="./scripts.js"></script>
+</body>
+</html>
